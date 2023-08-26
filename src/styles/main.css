@@ -28,7 +28,7 @@ body {
 }
 
 .header__inner {
-  width: 800px;
+  width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -47,7 +47,7 @@ body {
  */
 
 .nav {
-  width: 800px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -65,11 +65,16 @@ body {
   width: 24%;
   text-align: center;
   line-height: 24px;
-  padding: 24px;
   text-transform: uppercase;
 }
 
 .nav a {
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: #616161;
 }
@@ -119,7 +124,7 @@ body {
  */
 
 main {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -140,7 +145,7 @@ main {
 }
 
 .headline__figure {
-  width: 450px;
+  width: 100%;
   float: left;
 }
 
@@ -157,7 +162,7 @@ main {
 }
 
 .headline__content {
-  width: 600px;
+  width: 100%;
   float: left;
   padding: 16px 32px;
 }
@@ -183,6 +188,12 @@ main {
   border-radius: 5px;
   background-color: #2c3e50;
   transition: opacity 0.3s;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headline__button:hover {
@@ -194,7 +205,7 @@ main {
  */
 
 .latest {
-  width: 1000px;
+  width: 100%;
   margin: 60px auto;
   text-align: center;
 }
@@ -229,7 +240,7 @@ main {
   float: left;
   margin: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
 }

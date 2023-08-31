@@ -343,6 +343,31 @@ footer a {
 }
 
 @media screen and (min-width: 840px) {
+  .hamburger__button {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    transform: unset;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav__list {
+    flex-direction: row;
+  }
+
+  .nav__item a {
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+  }
+
   .posts {
     grid-template-columns: repeat(2, 1fr);
   }

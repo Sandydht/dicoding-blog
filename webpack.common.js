@@ -5,26 +5,33 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  entry: path.resolve(__dirname, 'src/index.js'),
+  output: {
+    path: path.resolve(__dirname, 'dist')
+  },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader',
-          },
-        ],
+            options: {
+              url: true,
+            }
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: [
           'file-loader',
         ],
-      },
-    ],
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -43,5 +50,5 @@ module.exports = {
       logo: path.resolve(__dirname, 'src/images/dicoding.jpeg'),
     }),
     new CleanWebpackPlugin(),
-  ],
+  ]
 };

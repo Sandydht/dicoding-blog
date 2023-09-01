@@ -2,14 +2,14 @@ import './styles/main.css';
 
 const hamburgerButtonElement = document.querySelector('#hamburger');
 const drawerElement = document.querySelector('#drawer');
-const mainElement = document.querySelector('#main');
+const bodyElement = document.querySelector('#body');
 
 hamburgerButtonElement.addEventListener('click', (event) => {
   drawerElement.classList.toggle('open');
   event.stopPropagation();
 });
 
-mainElement.addEventListener('click', (event) => {
+bodyElement.addEventListener('click', (event) => {
   drawerElement.classList.remove('open');
   event.stopPropagation();
 });

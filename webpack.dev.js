@@ -1,15 +1,18 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const common = require('./webpack.common');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
     port: 9000,
-    open: true
+    open: true,
   },
   plugins: [
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'json',
+      generateStatsFile: true,
+    }),
   ],
 });
-
